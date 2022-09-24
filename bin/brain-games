@@ -1,3 +1,5 @@
 #!/usr/bin/env /Applications/MAMP/bin/php/php7.4.21/bin/php
 <?php
-echo "\nWelcome to the Brain Games!\n";
+use function BrainGames\Cli\makePrompt;
+require_once '../vendor/autoload.php';
+makePrompt();
