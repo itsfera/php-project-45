@@ -7,7 +7,7 @@ use function BrainGames\Cli\cliPrompt;
 
 function getName(): string
 {
-    cliLine("Welcome to the Brain Games!");
+    cliLine("Welcome to the Brain Game!");
     $sName = cliPrompt('May I have your name?');
     cliLine("Hello, %s!", $sName);
     return $sName;

@@ -20,8 +20,9 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/Even.php",
             "src/Engine.php",
+            "src/Simple.php",
+            "src/Even.php",
             "src/Calc.php",
             "src/GCD.php",
             "src/Progression.php",

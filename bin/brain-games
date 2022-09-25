@@ -5,6 +5,4 @@ use function BrainGames\Cli\cliPrompt;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-cliLine('Welcome to the Brain Game!');
-$sName = cliPrompt('May I have your name?');
-cliLine("Hello, %s!", $sName);
+\BrainGames\Simple\startGame();
