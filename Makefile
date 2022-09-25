@@ -10,3 +10,5 @@ brain-even:
 	php bin/brain-even
 brain-calc:
 	php bin/brain-calc
+brain-gcd:
+	php bin/brain-gcd
