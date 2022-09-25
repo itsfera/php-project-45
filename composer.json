@@ -13,10 +13,18 @@
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "autoload": {
-        "files": ["src/Cli.php", "src/Even.php", "src/Engine.php", "src/Calc.php", "src/GCD.php"]
+        "files": [
+            "src/Cli.php",
+            "src/Even.php",
+            "src/Engine.php",
+            "src/Calc.php",
+            "src/GCD.php",
+            "src/Progression.php"
+        ]
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7"
