@@ -34,15 +34,15 @@ function startGame()
         cliLine("Question: {$iOperand1} {$sOperation} {$iOperand2}");
         do {
             $sUserGuess = (int)cliPrompt('Your answer');
-        } while ((int)$sUserGuess < 0);
+        } while ($sUserGuess < 0);
 
         $iCorrectAnswer = eval('return ' . $iOperand1 . $sOperation . $iOperand2 . ';');
-        $bUserResult = $iCorrectAnswer === $sUserGuess;
+        $bUserResult = (int)$iCorrectAnswer === $sUserGuess;
 
         if ($bUserResult === true) {
             printCorrectAnswer();
         } else {
-            printWrongAnswer($sUserGuess, $iCorrectAnswer, $sName);
+            printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, (string)$sName);
             return;
         }
         $iQuestionCounter++;

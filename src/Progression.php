@@ -40,14 +40,14 @@ function startGame()
         cliLine("Question: " . implode(" ", $arProgression));
         do {
             $sUserGuess = (int)cliPrompt('Your answer');
-        } while ((int)$sUserGuess < 0);
+        } while ($sUserGuess < 0);
 
         $bUserResult = $iCorrectAnswer === $sUserGuess;
 
         if ($bUserResult === true) {
             printCorrectAnswer();
         } else {
-            printWrongAnswer($sUserGuess, $iCorrectAnswer, $sName);
+            printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, (string)$sName);
             return;
         }
         $iQuestionCounter++;

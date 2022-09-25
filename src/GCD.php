@@ -36,7 +36,7 @@ function startGame()
         cliLine("Question: {$iOperand1} {$iOperand2}");
         do {
             $sUserGuess = (int)cliPrompt('Your answer');
-        } while ((int)$sUserGuess < 1);
+        } while ($sUserGuess < 1);
 
         $arCommon = array_intersect(findDivisors($iOperand1), findDivisors($iOperand2));
         rsort($arCommon);
@@ -46,7 +46,7 @@ function startGame()
         if ($bUserResult === true) {
             printCorrectAnswer();
         } else {
-            printWrongAnswer($sUserGuess, $iCorrectAnswer, $sName);
+            printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, (string)$sName);
             return;
         }
         $iQuestionCounter++;

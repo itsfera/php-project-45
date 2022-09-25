@@ -26,7 +26,7 @@ function printCorrectAnswer()
     return;
 }
 
-function printCongratulations($sName)
+function printCongratulations(string $sName)
 {
     cliLine("Congratulations, {$sName}!");
     return;

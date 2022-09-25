@@ -15,7 +15,7 @@ function makePrompt()
 
 function cliLine(string $sLine, string $sExtra = null)
 {
-    if ($sExtra) {
+    if (strlen($sExtra) > 0) {
         line($sLine, $sExtra);
     } else {
         line($sLine);
