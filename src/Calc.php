@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Even;
+namespace BrainGames\Calc;
 
 use function BrainGames\Cli\cliLine;
 use function BrainGames\Cli\cliPrompt;
@@ -18,25 +18,31 @@ function startGame()
 {
     $iMaxQuestion = 3;
     $iQuestionCounter = 1;
+    $arEquations = ["+" , "-", "*"];
 
     $sName = getName();
-    cliLine('Answer "yes" if the number is even, otherwise answer "no".');
+    cliLine('What is the result of the expression?');
     $bUserResult = false;
-    do {
-        $iQuestion = rand(1, 100);
-        cliLine("Question number {$iQuestionCounter}: {$iQuestion}");
-        do {
-            $sUserGuess = cliPrompt('Your answer');
-        } while ($sUserGuess !== "yes" && $sUserGuess !== "no");
 
-        $bUserGuess = $sUserGuess === "yes" ? true : false;
-        $bUserResult = isEven($iQuestion) === $bUserGuess;
+    do {
+        $sOperation = $arEquations[rand(0, 2)];
+        $iOperand1 = rand(1, 10);
+        do {
+            $iOperand2 = rand(1, 10);
+        } while ($iOperand2 > $iOperand1);
+
+        cliLine("Question number {$iQuestionCounter}: {$iOperand1} {$sOperation} {$iOperand2}");
+        do {
+            $sUserGuess = (int)cliPrompt('Your answer');
+        } while ((int)$sUserGuess < 0);
+
+        $iCorrectAnswer = eval('return ' . $iOperand1 . $sOperation . $iOperand2 . ';');
+        $bUserResult = $iCorrectAnswer === $sUserGuess;
 
         if ($bUserResult === true) {
             printCorrectAnswer();
         } else {
-            $sCorrectAnswer = $sUserGuess === "yes" ? "no" : "yes";
-            printWrongAnswer($sUserGuess, $sCorrectAnswer, $sName);
+            printWrongAnswer($sUserGuess, $iCorrectAnswer, $sName);
             return;
         }
         $iQuestionCounter++;
