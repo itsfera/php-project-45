@@ -37,7 +37,7 @@ function startGame()
         $iCorrectAnswer = $arProgression[$iQuestionIndex];
         $arProgression[$iQuestionIndex] = "..";
 
-        cliLine("Question number {$iQuestionCounter}: " . implode(" ", $arProgression));
+        cliLine("Question: " . implode(" ", $arProgression));
         do {
             $sUserGuess = (int)cliPrompt('Your answer');
         } while ((int)$sUserGuess < 0);

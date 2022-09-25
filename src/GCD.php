@@ -33,7 +33,7 @@ function startGame()
         $iOperand1 = rand(1, 100);
         $iOperand2 = rand(1, 100);
 
-        cliLine("Question number {$iQuestionCounter}: {$iOperand1} {$iOperand2}");
+        cliLine("Question: {$iOperand1} {$iOperand2}");
         do {
             $sUserGuess = (int)cliPrompt('Your answer');
         } while ((int)$sUserGuess < 1);

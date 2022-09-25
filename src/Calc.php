@@ -31,7 +31,7 @@ function startGame()
             $iOperand2 = rand(1, 10);
         } while ($iOperand2 > $iOperand1);
 
-        cliLine("Question number {$iQuestionCounter}: {$iOperand1} {$sOperation} {$iOperand2}");
+        cliLine("Question: {$iOperand1} {$sOperation} {$iOperand2}");
         do {
             $sUserGuess = (int)cliPrompt('Your answer');
         } while ((int)$sUserGuess < 0);

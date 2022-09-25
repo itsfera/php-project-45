@@ -24,7 +24,7 @@ function startGame()
     $bUserResult = false;
     do {
         $iQuestion = rand(1, 100);
-        cliLine("Question number {$iQuestionCounter}: {$iQuestion}");
+        cliLine("Question: {$iQuestion}");
         do {
             $sUserGuess = cliPrompt('Your answer');
         } while ($sUserGuess !== "yes" && $sUserGuess !== "no");
