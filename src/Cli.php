@@ -25,6 +25,6 @@ function cliLine(string $sLine, string $sExtra = null): bool
 
 function cliPrompt(string $sQuestion): string
 {
-    prompt($sQuestion);
-    return $sQuestion;
+    $sName = prompt($sQuestion);
+    return $sName;
 }
