@@ -50,7 +50,7 @@ function startGame(): bool
         if ($bUserResult === true) {
             printCorrectAnswer();
         } else {
-            printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, (string)$sName);
+            printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, $sName);
             return false;
         }
         $iQuestionCounter++;

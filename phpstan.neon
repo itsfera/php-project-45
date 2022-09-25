@@ -1,0 +1,11 @@
+parameters:
+  level: 8
+  paths:
+    - src
+    - bin
+
+  excludePaths:
+    - tests/*/data/*
+
+  checkGenericClassInNonGenericObjectType: false
+  reportUnmatchedIgnoredErrors: false

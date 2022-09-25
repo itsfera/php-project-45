@@ -37,7 +37,7 @@ function startGame(): bool
         } while ($sUserGuess < 0);
 
         $iCorrectAnswer = eval('return ' . $iOperand1 . $sOperation . $iOperand2 . ';');
-        $bUserResult = (int)$iCorrectAnswer === $sUserGuess;
+        $bUserResult = (int)$iCorrectAnswer === $sUserGuess ? true : false;
 
         if ($bUserResult === true) {
             printCorrectAnswer();

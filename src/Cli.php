@@ -13,7 +13,7 @@ function makePrompt(): bool
     return true;
 }
 
-function cliLine(string $sLine, string $sExtra = null): bool
+function cliLine(string $sLine, string $sExtra = ""): bool
 {
     if (strlen($sExtra) > 0) {
         line($sLine, $sExtra);
