@@ -17,3 +17,30 @@ function makePrompt()
     line("Hello, %s!", $name);
     return;
 }
+
+/**
+ * cliLine
+ *
+ * @param  mixed $sLine
+ * @return void
+ */
+function cliLine(string $sLine, $sExtra = null)
+{
+    if ($sExtra) {
+        line($sLine, $sExtra);
+    } else {
+        line($sLine);
+    }
+    return true;
+}
+
+/**
+ * cliPrompt
+ *
+ * @param  mixed $sQuestion
+ * @return void
+ */
+function cliPrompt(string $sQuestion)
+{
+    return prompt($sQuestion);
+}

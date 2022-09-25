@@ -1,5 +1,10 @@
 #!/usr/bin/env /Applications/MAMP/bin/php/php7.4.21/bin/php
 <?php
-use function BrainGames\Cli\makePrompt;
+use function BrainGames\Cli\cliLine;
+use function BrainGames\Cli\cliPrompt;
+
 require_once '../vendor/autoload.php';
-makePrompt();
+
+cliLine('Welcome to the Brain Game!');
+$sName = cliPrompt('May I have your name?');
+cliLine("Hello, %s!", $sName);

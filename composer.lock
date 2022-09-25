@@ -54,6 +54,10 @@
                 "cli",
                 "console"
             ],
+            "support": {
+                "issues": "https://github.com/wp-cli/php-cli-tools/issues",
+                "source": "https://github.com/wp-cli/php-cli-tools/tree/v0.11.15"
+            },
             "time": "2022-08-15T10:15:55+00:00"
         }
     ],
@@ -107,6 +111,11 @@
                 "phpcs",
                 "standards"
             ],
+            "support": {
+                "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
+                "source": "https://github.com/squizlabs/PHP_CodeSniffer",
+                "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
+            },
             "time": "2022-06-18T07:21:10+00:00"
         }
     ],
@@ -116,5 +125,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
