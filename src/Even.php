@@ -40,7 +40,7 @@ function startGame(): bool
             return false;
         }
         $iQuestionCounter++;
-    } while ($bUserResult === true && $iQuestionCounter <= $iMaxQuestion);
+    } while ($iQuestionCounter <= $iMaxQuestion);
     printCongratulations($sName);
     return true;
 }
