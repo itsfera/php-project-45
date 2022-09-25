@@ -5,11 +5,6 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-/**
- * makePrompt
- *
- * @return void
- */
 function makePrompt()
 {
     line('Welcome to the Brain Game!');
@@ -18,13 +13,7 @@ function makePrompt()
     return;
 }
 
-/**
- * cliLine
- *
- * @param  mixed $sLine
- * @return void
- */
-function cliLine(string $sLine, $sExtra = null)
+function cliLine(string $sLine, string $sExtra = null)
 {
     if ($sExtra) {
         line($sLine, $sExtra);
@@ -34,12 +23,6 @@ function cliLine(string $sLine, $sExtra = null)
     return true;
 }
 
-/**
- * cliPrompt
- *
- * @param  mixed $sQuestion
- * @return void
- */
 function cliPrompt(string $sQuestion)
 {
     return prompt($sQuestion);
