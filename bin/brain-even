@@ -1,4 +1,4 @@
-#!/usr/bin/env /Applications/MAMP/bin/php/php7.4.21/bin/php
+#!/usr/bin/env php
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 

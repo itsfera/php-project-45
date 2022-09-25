@@ -2,4 +2,4 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-\BrainGames\Calc\startGame();
+\BrainGames\Prime\startGame();
