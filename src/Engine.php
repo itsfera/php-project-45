@@ -13,21 +13,21 @@ function getName(): string
     return $sName;
 }
 
-function printWrongAnswer(string $sWrong, string $sRight, string $sName)
+function printWrongAnswer(string $sWrong, string $sRight, string $sName): bool
 {
     cliLine("'{$sWrong}' is wrong answer ;(. Correct answer was '{$sRight}'.");
     cliLine("Let's try again, {$sName}!");
-    return;
+    return true;
 }
 
-function printCorrectAnswer()
+function printCorrectAnswer(): bool
 {
     cliLine("Correct!");
-    return;
+    return true;
 }
 
-function printCongratulations(string $sName)
+function printCongratulations(string $sName): bool
 {
     cliLine("Congratulations, {$sName}!");
-    return;
+    return true;
 }

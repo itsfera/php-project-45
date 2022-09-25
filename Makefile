@@ -1,7 +1,7 @@
 install:
 	composer install
 brain-games:
-	/Applications/MAMP/bin/php/php7.4.21/bin/php bin/brain-games
+	php bin/brain-games
 validate:
 	composer validate
 lint:

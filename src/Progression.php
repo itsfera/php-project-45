@@ -9,7 +9,10 @@ use function BrainGames\Engine\printWrongAnswer;
 use function BrainGames\Engine\printCorrectAnswer;
 use function BrainGames\Engine\printCongratulations;
 
-function makeRandomProgression()
+/**
+ * @return array<int>
+ */
+function makeRandomProgression(): array
 {
     $iStart = rand(0, 10);
     $iApplicator = rand(1, 10);
@@ -22,7 +25,7 @@ function makeRandomProgression()
     return $arProgression;
 }
 
-function startGame()
+function startGame(): bool
 {
     $iMaxQuestion = 3;
     $iQuestionCounter = 1;
@@ -48,10 +51,10 @@ function startGame()
             printCorrectAnswer();
         } else {
             printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, (string)$sName);
-            return;
+            return false;
         }
         $iQuestionCounter++;
     } while ($bUserResult === true && $iQuestionCounter <= $iMaxQuestion);
     printCongratulations($sName);
-    return;
+    return true;
 }

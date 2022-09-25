@@ -9,7 +9,10 @@ use function BrainGames\Engine\printWrongAnswer;
 use function BrainGames\Engine\printCorrectAnswer;
 use function BrainGames\Engine\printCongratulations;
 
-function findDivisors(int $iNumber)
+/**
+ * @return array<int>
+ */
+function findDivisors(int $iNumber): array
 {
     $arResult = [];
     for ($i = 1; $i <= $iNumber; $i++) {
@@ -20,7 +23,7 @@ function findDivisors(int $iNumber)
     return $arResult;
 }
 
-function startGame()
+function startGame(): bool
 {
     $iMaxQuestion = 3;
     $iQuestionCounter = 1;
@@ -47,10 +50,10 @@ function startGame()
             printCorrectAnswer();
         } else {
             printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, (string)$sName);
-            return;
+            return false;
         }
         $iQuestionCounter++;
     } while ($bUserResult === true && $iQuestionCounter <= $iMaxQuestion);
     printCongratulations($sName);
-    return;
+    return true;
 }

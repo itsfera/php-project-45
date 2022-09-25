@@ -9,7 +9,7 @@ use function BrainGames\Engine\printWrongAnswer;
 use function BrainGames\Engine\printCorrectAnswer;
 use function BrainGames\Engine\printCongratulations;
 
-function isSimple(int $iNumber)
+function isSimple(int $iNumber): bool
 {
     $bRes = true;
     for ($i = 2; $i < $iNumber; $i++) {
@@ -20,7 +20,7 @@ function isSimple(int $iNumber)
     return $bRes;
 }
 
-function startGame()
+function startGame(): bool
 {
     $iMaxQuestion = 3;
     $iQuestionCounter = 1;
@@ -44,10 +44,10 @@ function startGame()
         } else {
             $sCorrectAnswer = $sUserGuess === "yes" ? "no" : "yes";
             printWrongAnswer($sUserGuess, $sCorrectAnswer, $sName);
-            return;
+            return false;
         }
         $iQuestionCounter++;
     } while ($bUserResult === true && $iQuestionCounter <= $iMaxQuestion);
     printCongratulations($sName);
-    return;
+    return true;
 }

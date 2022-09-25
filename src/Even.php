@@ -9,12 +9,12 @@ use function BrainGames\Engine\printWrongAnswer;
 use function BrainGames\Engine\printCorrectAnswer;
 use function BrainGames\Engine\printCongratulations;
 
-function isEven(int $iNumber)
+function isEven(int $iNumber): bool
 {
     return $iNumber % 2 === 0;
 }
 
-function startGame()
+function startGame(): bool
 {
     $iMaxQuestion = 3;
     $iQuestionCounter = 1;
@@ -37,10 +37,10 @@ function startGame()
         } else {
             $sCorrectAnswer = $sUserGuess === "yes" ? "no" : "yes";
             printWrongAnswer($sUserGuess, $sCorrectAnswer, $sName);
-            return;
+            return false;
         }
         $iQuestionCounter++;
     } while ($bUserResult === true && $iQuestionCounter <= $iMaxQuestion);
     printCongratulations($sName);
-    return;
+    return true;
 }
