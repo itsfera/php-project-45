@@ -4,3 +4,5 @@
 <a href="https://codeclimate.com/github/itsfera/php-project-45/maintainability"><img src="https://api.codeclimate.com/v1/badges/47c1da6f9d39b4b3d38f/maintainability" /></a>
 
 [![asciicast](https://asciinema.org/a/zHOvMBEPl7u36GeTEF89TDOVD.svg)](https://asciinema.org/a/zHOvMBEPl7u36GeTEF89TDOVD)
+
+[![asciicast](https://asciinema.org/a/LNOGLkKyxWemh3Q3TytnQsn3Y.svg)](https://asciinema.org/a/LNOGLkKyxWemh3Q3TytnQsn3Y)
