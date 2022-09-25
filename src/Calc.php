@@ -42,11 +42,11 @@ function startGame()
         if ($bUserResult === true) {
             printCorrectAnswer();
         } else {
-            printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, (string)$sName);
+            printWrongAnswer((string)$sUserGuess, (string)$iCorrectAnswer, $sName);
             return;
         }
         $iQuestionCounter++;
-    } while ($bUserResult === true && $iQuestionCounter <= $iMaxQuestion);
+    } while ($bUserResult == true && $iQuestionCounter <= $iMaxQuestion);
     printCongratulations($sName);
     return;
 }
