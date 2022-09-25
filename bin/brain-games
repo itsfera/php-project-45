@@ -3,7 +3,7 @@
 use function BrainGames\Cli\cliLine;
 use function BrainGames\Cli\cliPrompt;
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 cliLine('Welcome to the Brain Game!');
 $sName = cliPrompt('May I have your name?');
